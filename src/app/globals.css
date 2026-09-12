@@ -1,26 +1,54 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --primary: #0B192C;
+  --primary-accent: #4361EE;
+  --secondary-accent: #FE6B6B;
+  --text: #2B2D42;
+  --background: #F8F9FA;
 }
 
 @theme inline {
+  --font-sans: var(--font-dm-sans), sans-serif;
+  --font-jakarta: var(--font-plus-jakarta), sans-serif;
+  
+  --color-primary: var(--primary);
+  --color-primary-accent: var(--primary-accent);
+  --color-secondary-accent: var(--secondary-accent);
+  --color-text: var(--text);
   --color-background: var(--background);
-  --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --primary: #0B192C;
+    --primary-accent: #4361EE;
+    --secondary-accent: #FE6B6B;
+    --text: #2B2D42;
+    --background: #F8F9FA;
   }
 }
 
 body {
   background: var(--background);
-  color: var(--foreground);
+  color: var(--text);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.form-label {
+  @apply text-sm font-medium text-text/70;
+}
+
+.form-input {
+  @apply h-[52px] w-full rounded-lg border border-[#DFE4E9] bg-background
+    px-4 text-text placeholder:text-text/60
+    transition-colors focus:border-primary-accent focus:outline-none
+    focus:ring-1 focus:ring-primary-accent;
+}
+
+.action-btn {
+  @apply cursor-pointer rounded-lg bg-primary-accent px-6 py-4 font-sans text-lg text-white shadow-md transition-colors hover:bg-primary-accent/90 disabled:cursor-not-allowed disabled:opacity-60;
 }
