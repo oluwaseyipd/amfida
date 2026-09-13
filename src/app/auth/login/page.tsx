@@ -102,7 +102,9 @@ export default function Login(){
                         </div>
                     </div>
 
-                    <span className='font-sans text-sm text-primary-accent text-right mb-3'>Forgot Password?</span>
+                    <div className='text-right'> 
+                        <Link href='/auth/forgot-password' className='font-sans text-sm text-primary-accent mb-3 cursor-pointer hover:underline'>Forgot Password?</Link>
+                    </div>
 
 
                     {/* Submit button */}
