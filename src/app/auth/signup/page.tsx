@@ -15,22 +15,25 @@ export default function Signup() {
         <div className="flex flex-row  items-center gap-6 p-5">
             {/* Left side */}
             <div className="flex flex-col justify-between bg-primary-accent w-[700px] h-[950px] py-8 px-16 rounded-2xl">
-                {/* Logo */}
-                <Image
-                    src="/logo-w.png"
-                    width={150}
-                    height={150}
-                    alt="logo"
-                    className='mt-16'
-                />
-                {/* Header */}
-                <div>
-                    <h2 className="font-jakarta font-bold text-5xl text-white">Connect with <br />Tenant with Ease</h2>
-                    <p className="w-[300px] font-sans font-light text-white mt-3">
-                        Discover endless possibilities on Amfida,
-                        where tenants and house owners unite.
-                        Jump right in with us!
-                    </p>
+                
+                <div className='flex flex-col justify-between h-[400px]'>
+                    {/* Logo */}
+                    <Image
+                        src="/logo-w.png"
+                        width={150}
+                        height={150}
+                        alt="logo"
+                        className='mt-16'
+                    />
+                    {/* Header */}
+                    <div>
+                        <h2 className="font-jakarta font-bold text-5xl text-white">Connect with <br />Tenant with Ease</h2>
+                        <p className="w-[300px] font-sans font-light text-white mt-3">
+                            Discover endless possibilities on Amfida,
+                            where tenants and house owners unite.
+                            Jump right in with us!
+                        </p>
+                    </div>
                 </div>
                 {/* Sliding reviews */}
 
@@ -71,8 +74,8 @@ export default function Signup() {
                             <label
                                 htmlFor="role-agent"
                                 className={`flex items-center gap-3 h-[52px] px-4 rounded-lg border-2 cursor-pointer transition-colors ${selectedRole === 'agent'
-                                        ? 'border-primary-accent bg-white'
-                                        : 'border-[#DFE4E9] bg-white hover:border-gray-300'
+                                    ? 'border-primary-accent bg-white'
+                                    : 'border-[#DFE4E9] bg-white hover:border-gray-300'
                                     }`}
                             >
                                 <input
@@ -87,7 +90,7 @@ export default function Signup() {
                                 <span className={`text-sm font-sans ${selectedRole === 'agent'
                                     ? 'text-primary-accent font-semibold'
                                     : 'text-text font-medium '
-                                }`}>
+                                    }`}>
                                     As an Agent
                                 </span>
                             </label>
@@ -96,8 +99,8 @@ export default function Signup() {
                             <label
                                 htmlFor="role-landlord"
                                 className={`flex items-center gap-3 h-[52px] px-4 rounded-lg border-2 cursor-pointer transition-colors ${selectedRole === 'landlord'
-                                        ? 'border-primary-accent bg-white'
-                                        : 'border-[#DFE4E9] bg-white hover:border-gray-300'
+                                    ? 'border-primary-accent bg-white'
+                                    : 'border-[#DFE4E9] bg-white hover:border-gray-300'
                                     }`}
                             >
                                 <input
@@ -112,7 +115,7 @@ export default function Signup() {
                                 <span className={`text-sm font-sans ${selectedRole === 'landlord'
                                     ? 'text-primary-accent font-semibold'
                                     : 'text-text font-medium '
-                                }`}>
+                                    }`}>
                                     As a Landlord
                                 </span>
                             </label>
@@ -131,8 +134,8 @@ export default function Signup() {
                                 //   id={firstName}
                                 type="text"
                                 placeholder="First name"
-                                className='form-input'                            
-                                />
+                                className='form-input'
+                            />
                         </div>
 
                         <div className="flex flex-col gap-2 w-full">
@@ -145,8 +148,8 @@ export default function Signup() {
                                 //   id={lastName}
                                 type="text"
                                 placeholder="Last name"
-                                className='form-input'                           
-                                />
+                                className='form-input'
+                            />
                         </div>
                     </div>
 
@@ -162,8 +165,8 @@ export default function Signup() {
                                 //   id={phoneNumber}
                                 type="text"
                                 placeholder="Enter your phone number"
-                                className='form-input'                            
-                                />
+                                className='form-input'
+                            />
                         </div>
                     </div>
 
@@ -179,8 +182,8 @@ export default function Signup() {
                                 //   id={email}
                                 type="text"
                                 placeholder="Enter your email address"
-                                className='form-input'                            
-                                />
+                                className='form-input'
+                            />
                         </div>
                     </div>
 
@@ -197,8 +200,8 @@ export default function Signup() {
                                     //   id={password}
                                     type={showPassword ? "text" : "password"}
                                     placeholder="Create your password"
-                                    className='form-input'                                
-                                    />
+                                    className='form-input'
+                                />
 
                                 <button
                                     type="button"
