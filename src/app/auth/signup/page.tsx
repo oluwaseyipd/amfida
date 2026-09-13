@@ -1,8 +1,9 @@
 "use client"
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { useState } from 'react';
-import { Eye, EyeOff } from 'lucide-react'; // Or any icon library
+import { Eye, EyeOff } from 'lucide-react'; 
 
 type Role = 'agent' | 'landlord';
 
@@ -53,7 +54,7 @@ export default function Signup() {
                 <div className='text-text'>
                     <h3 className='font-jakarta font-semibold text-3xl'>Create an account</h3>
                     <p className='font-sans mt-2'>Already have an account? {" "}
-                        <span className='font-semibold underline text-primary-accent cursor-pointer'>Login</span>
+                         <Link className='font-semibold underline text-primary-accent cursor-pointer' href='/auth/login'> Login </Link>
                     </p>
                 </div>
 
