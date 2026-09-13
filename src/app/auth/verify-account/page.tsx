@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from "react";
-import { LockIcon } from "lucide-react";
+import { LockIcon, RotateCw } from "lucide-react";
 
 type VerificationMethod = 'phone_number' | 'email';
 
@@ -12,6 +12,7 @@ export default function VerifyAccount(){
 
     return(
         <div className="flex min-h-screen justify-center items-center gap-6 p-5">
+    
             <div className="bg-white w-[600px] h-[600px] p-6 rounded-lg shadow-md">
 
                 {/* Header */}
@@ -124,6 +125,99 @@ export default function VerifyAccount(){
                         className="action-btn w-full mt-1"
                     > Send Code </button>
                 </form>
+            </div>
+
+            {/* Redirect to Verify OTP Code */}
+            <div className="hidden bg-white w-[600px] h-[600px] p-6 rounded-lg shadow-md">
+
+                {/* Header */}
+                <div className="flex flex-col gap-y-3 pt-3 items-center text-center text-text">
+                    <span className="flex items-center justify-center w-16 h-16 bg-primary-accent rounded-full shadow-sm">
+                        <LockIcon className="w-8 h-8 text-white" />
+                    </span>
+                    
+                    <h3 className='font-jakarta font-semibold text-3xl'>Verify Your Account</h3>
+                    <p className='font-sans w-[380px]'>
+                        We’ve sent a 6-digit code to {" "} <br/>
+                        <span className="font-bold">{`email`}</span>
+                    </p>
+                </div>
+
+                <form
+                    action=""
+                    method="post"
+                    className="flex flex-col gap-y-6 font-sans p-8 mt-4"
+                >
+
+                {/* Input boxes */}
+<div className="flex gap-3 justify-center">
+    
+    <div>
+        <input
+            type="text"
+            maxLength={1}
+            className='form-input w-[52px] h-[62px] text-center text-3xl font-semibold'
+        /> 
+    </div>
+
+    <div>
+        <input
+            type="text"
+            maxLength={1}
+            className='form-input w-[52px] h-[62px] text-center text-3xl font-semibold'
+        /> 
+    </div>
+
+    <div>
+        <input
+            type="text"
+            maxLength={1}
+            className='form-input w-[52px] h-[62px] text-center text-3xl font-semibold'
+        /> 
+    </div>
+
+    <div>
+        <input
+            type="text"
+            maxLength={1}
+            className='form-input w-[52px] h-[62px] text-center text-3xl font-semibold'
+        /> 
+    </div>
+
+    <div>
+        <input
+            type="text"
+            maxLength={1}
+            className='form-input w-[52px] h-[62px] text-center text-3xl font-semibold'
+        /> 
+    </div>
+
+    <div>
+        <input
+            type="text"
+            maxLength={1}
+            className='form-input w-[52px] h-[62px] text-center text-3xl font-semibold'
+        /> 
+    </div>
+
+</div>
+{/* Submit button */}
+                    <button
+                        type="submit"
+                        className="action-btn w-full mt-1"
+                    > Verify Code </button>
+</form>
+
+                    {/* Redirect */}
+                <div className="flex flex-col justify-center items-center mt-4">
+                     <p className='font-sans w-[380px] text-center'>Didn’t receive the code?.</p>
+
+                    <span className="flex gap-1 font-sans text-primary-accent/90 hover:text-primary-accent mt-2 cursor-pointer"> 
+                        <RotateCw />
+                        Back to Login
+                    </span>
+                </div>
+
             </div>
         </div>
     );
