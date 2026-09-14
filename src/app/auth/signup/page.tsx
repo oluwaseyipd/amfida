@@ -13,9 +13,9 @@ export default function Signup() {
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
     return (
 
-        <div className="flex flex-row  items-center gap-6 p-5">
+        <div className="flex flex-row items-center gap-6 p-5">
             {/* Left side */}
-            <div className="flex flex-col justify-between bg-primary-accent w-[700px] h-[950px] py-8 px-16 rounded-2xl">
+            <div className="hidden lg:flex flex-col justify-between bg-primary-accent w-[700px] h-[950px] py-8 px-16 rounded-2xl">
                 
                 <div className='flex flex-col justify-between h-[400px]'>
                     {/* Logo */}
@@ -48,12 +48,23 @@ export default function Signup() {
             </div>
 
             {/* Right side */}
-            <div className="w-[800px] py-6 px-10">
+            <div className="w-full md:w-[800px] py-6 px-7 md:px-10 bg-white lg:bg-transparent shadow-md lg:shadow-none rounded-xl lg:rounded-none">
+
+                {/* Logo */}
+                <div className='lg:hidden flex flex-col items-center mb-8 pt-3'>
+                    <Image
+                        src="/primary-logo.png"
+                        width={150}
+                        height={150}
+                        alt="logo"
+                    />
+                </div>
+                
 
                 {/* Header */}
-                <div className='text-text'>
-                    <h3 className='font-jakarta font-semibold text-3xl'>Create an account</h3>
-                    <p className='font-sans mt-2'>Already have an account? {" "}
+                <div className='text-center lg:text-left text-text'>
+                    <h3 className='font-jakarta font-semibold text-2xl md:text-3xl'>Create an account</h3>
+                    <p className='font-sans mt-2 text-sm md:text-md'>Already have an account? {" "}
                          <Link className='font-semibold underline text-primary-accent cursor-pointer' href='/auth/login'> Login </Link>
                     </p>
                 </div>
@@ -70,7 +81,7 @@ export default function Signup() {
                             You are creating an account as?
                         </label>
 
-                        <div className="grid grid-cols-2 gap-4">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                             {/* Agent Option */}
                             <label
                                 htmlFor="role-agent"
@@ -124,7 +135,7 @@ export default function Signup() {
                     </div>
 
                     {/* Name */}
-                    <div className="flex flex-col md:flex-row gap-x-[60px]">
+                    <div className="flex flex-col md:flex-row gap-y-6 gap-x-[60px]">
                         <div className="flex flex-col gap-2 w-full">
                             <label
                                 // htmlFor={firstName} 
@@ -245,7 +256,7 @@ export default function Signup() {
                     {/* Submit button */}
                     <button
                         type="submit"
-                        className="action-btn w-[300px] "
+                        className="action-btn w-full lg:w-[300px] "
                     > Create Account </button>
                 </form>
 

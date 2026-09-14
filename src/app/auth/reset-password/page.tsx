@@ -10,22 +10,22 @@ export default function ResetPassword(){
 
     return(
         <div className="flex min-h-screen justify-center items-center gap-6 p-5">
-            <div className="bg-white w-[600px] h-[600px] p-6 rounded-lg shadow-md">
+            <div className="bg-white w-full lg:w-[600px] h-ful lg:h-[600px] p-6 rounded-lg shadow-md">
                 {/* Header */}
                 <div className="flex flex-col gap-y-3 pt-3 items-center text-center text-text">
                     <span className="flex items-center justify-center w-16 h-16 bg-primary-accent rounded-full shadow-sm">
                         <LockIcon className="w-8 h-8 text-white" />
                     </span>
                     
-                    <h3 className='font-jakarta font-semibold text-3xl'>Reset Password</h3>
-                    <p className='font-sans w-[380px]'>Choose a new password for your account.</p>
+                    <h3 className='font-jakarta font-semibold text-2xl md:text-3xl'>Reset Password</h3>
+                    <p className='font-sans text-sm md:text-md  w-[380px]'>Choose a new password for your account.</p>
                 </div>
 
                 {/* Form body */}
                 <form
                     action=""
                     method="post"
-                    className="flex flex-col gap-y-6 font-sans p-8 mt-12"
+                    className="flex flex-col gap-y-6 font-sans  p-2 md:p-8 mt-5 lg:mt-12"
                 >
                     {/* Password */}
                     <div>

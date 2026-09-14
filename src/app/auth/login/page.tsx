@@ -11,7 +11,7 @@ export default function Login(){
     return(
         <div className="flex flex-row  items-center gap-6 p-5">
             {/* Left side */}
-            <div className="flex flex-col justify-between bg-primary-accent w-[700px] h-[950px] py-8 px-16 rounded-2xl">
+            <div className="hidden lg:flex flex-col justify-between bg-primary-accent w-[700px] h-[950px] py-8 px-16 rounded-2xl">
                         
                         <div className='flex flex-col justify-between h-[400px]'>
                             {/* Logo */}
@@ -44,11 +44,20 @@ export default function Login(){
             </div>
 
             {/* Right side  */}
-            <div className="w-[800px] py-6 px-10">
-                {/* Header */}
+<div className="w-full md:w-[800px] py-6 px-7 md:px-10 bg-white lg:bg-transparent shadow-md lg:shadow-none rounded-xl lg:rounded-none">                {/* Header */}
+               {/* Logo */}
+                               <div className='lg:hidden flex flex-col items-center mb-8 pt-3'>
+                                   <Image
+                                       src="/primary-logo.png"
+                                       width={150}
+                                       height={150}
+                                       alt="logo"
+                                   />
+                               </div>
+               
                 <div className='flex flex-col items-center text-text'>
-                    <h3 className='font-jakarta font-semibold text-3xl'>Login to your account</h3>
-                    <p className='font-sans mt-2'>Don't have an account {" "}
+                    <h3 className='font-jakarta font-semibold text-2xl md:text-3xl'>Login to your account</h3>
+                    <p className='font-sans mt-2 text-sm md:text-md'>Don't have an account {" "}
                          <Link className='font-semibold underline text-primary-accent cursor-pointer' href='/auth/signup'> Signup </Link>
                     </p>
                 </div>
@@ -110,7 +119,7 @@ export default function Login(){
                     {/* Submit button */}
                     <button
                         type="submit"
-                        className="action-btn w-[200px] "
+                        className="action-btn w-full lg:w-[200px] "
                     > 
                     Login </button>
 
